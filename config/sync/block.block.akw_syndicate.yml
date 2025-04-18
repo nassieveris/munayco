@@ -1,0 +1,23 @@
+uuid: 1f55a386-7061-4ed9-b8c6-c974c53f4a8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - akw
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: akw_syndicate
+theme: akw
+region: disabled
+weight: -4
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

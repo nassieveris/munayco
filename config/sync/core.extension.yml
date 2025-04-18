@@ -12,12 +12,15 @@ module:
   ckeditor5: 0
   comment: 0
   config: 0
+  config_pages: 0
+  config_translation: 0
   contact: 0
   contact_emails: 0
   contact_storage: 0
   contact_storage_export: 0
   contextual: 0
   csv_serialization: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -25,6 +28,7 @@ module:
   entity_browser: 0
   entity_reference_revisions: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -37,12 +41,15 @@ module:
   jquery_ui: 0
   jquery_ui_autocomplete: 0
   jquery_ui_menu: 0
+  language: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  locale: 0
   media: 0
   media_entity_file_replace: 0
   media_library: 0
+  menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
@@ -84,4 +91,5 @@ theme:
   olivero: 0
   claro: 0
   gin: 0
+  akw: 0
 profile: standard

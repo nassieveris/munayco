@@ -1,0 +1,22 @@
+uuid: 67274f13-fb3f-41ff-b15d-348b0d595526
+langcode: en
+status: true
+dependencies:
+  theme:
+    - akw
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: akw_primary_local_tasks
+theme: akw
+region: primary_menu
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

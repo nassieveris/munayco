@@ -1,0 +1,6 @@
+global:
+  js:
+    assets/js/scripts.js: { weight: -25, attributes: { defer: true } }
+  css:
+    layout:
+      assets/css/styles.css: { weight: 0 }

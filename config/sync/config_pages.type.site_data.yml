@@ -1,0 +1,17 @@
+uuid: df18c592-0b7a-4e2f-bb0d-099129dd1041
+langcode: en
+status: true
+dependencies: {  }
+id: site_data
+label: 'Site Data'
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: /admin/config/site
+  weight: 0
+  description: 'Site Data'

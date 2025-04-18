@@ -1,0 +1,18 @@
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: clamp(1rem, -5rem + 10.6667vw, 3rem);
+  &_one {
+    flex: 1;
+  }
+  &_inline {
+    display: flex;
+    gap: .25rem;
+    align-items: center;
+  }
+  &_column {
+    display: flex;
+    flex-direction: column;
+  }
+}

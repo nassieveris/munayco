@@ -1,0 +1,23 @@
+uuid: 979296cb-3342-4632-b6d8-99791984f903
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - akw
+_core:
+  default_config_hash: _nZjxxdypO6xrOAJkCYD81v0L7wh2zbCAVO7_C-UKIc
+id: akw_search_form_narrow
+theme: akw
+region: disabled
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

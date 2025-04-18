@@ -1,12 +1,12 @@
 uuid: ec586070-da4b-464e-8a5c-7aa00b829da6
-langcode: en
+langcode: es
 status: true
 dependencies:
   module:
     - editor
 _core:
   default_config_hash: vpZysv3RHJjhYzq7O_q5q8mVlHdrSzKELmXyiX6RtV0
-name: 'Full HTML'
+name: 'HTML completo'
 format: full_html
 weight: 2
 filters:

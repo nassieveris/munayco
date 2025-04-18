@@ -1,0 +1,23 @@
+uuid: 6eea2c8c-9765-47da-b600-828ffed65ba3
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - akw
+_core:
+  default_config_hash: pbbed0hdqGDF-_QWVVTWRAwgDIotFuAvWH5mWUZu0fA
+id: akw_search_form_wide
+theme: akw
+region: disabled
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

@@ -1,5 +1,5 @@
 uuid: fa060727-15e9-44af-9d0a-53be80100b67
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -18,7 +18,7 @@ dependencies:
 _core:
   default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
 id: content_editor
-label: 'Content editor'
+label: 'Editor de contenido'
 weight: 2
 is_admin: false
 permissions:

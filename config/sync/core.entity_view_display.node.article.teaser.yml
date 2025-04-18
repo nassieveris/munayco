@@ -5,9 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
-    - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_img
+    - field.field.node.article.field_summary
     - field.field.node.article.field_tags
     - image.style.medium
     - node.type.article
@@ -53,5 +53,6 @@ content:
     weight: 100
     region: content
 hidden:
-  comment: true
   field_img: true
+  field_summary: true
+  langcode: true

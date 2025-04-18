@@ -1,0 +1,123 @@
+
+  {% if logged_in %}
+  <div class="main-logged-in">
+    {% if page.primary_menu %}
+      {{ page.primary_menu }}
+    {% endif %}
+    {% if page.secondary_menu %}
+      {{ page.secondary_menu }}
+    {% endif %}
+
+    {% if page.breadcrumb %}
+      {{ page.breadcrumb }}
+    {% endif %}
+
+    {% if page.featured %}
+      {{ page.featured }}
+    {% endif %}
+
+    {% if page.help %}
+      {{ page.help }}
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if page.sidebar_first %}
+  <aside class="main-first layout-sidebar-first" role="complementary">
+    {{ page.sidebar_first }}
+  </aside>
+  {% endif %}
+
+  {{ page.content }}
+
+  {% if page.sidebar_second %}
+  <aside class="main-second layout-sidebar-second" role="complementary">
+    {{ page.sidebar_second }}
+  </aside>
+  {% endif %}
+
+  {% include "@akw/sections/footer.html.twig" ignore missing %}
+
+
+{#}
+
+   {% if logged_in %}
+      <div class="main-logged-in">
+        {% if page.primary_menu %}
+          {{ page.primary_menu }}
+        {% endif %}
+        {% if page.secondary_menu %}
+          {{ page.secondary_menu }}
+        {% endif %}
+
+        {% if page.breadcrumb %}
+          {{ page.breadcrumb }}
+        {% endif %}
+
+        {% if page.featured %}
+          {{ page.featured }}
+        {% endif %}
+
+        {% if page.help %}
+          {{ page.help }}
+        {% endif %}
+      </div>
+    {% endif %}
+
+  <main id="ndcmMain" class="main" role="main">
+
+    {% if node or node.getType() != 'area' %}
+    <nav id="breads" class="breads" role="navigation" aria-labelledby="system-breadcrumb">
+      <div class="containerPage breadsContainer">
+        {{ drupal_entity('block', 'ndcm_theme_breadcrumbs') }}
+      </div>
+    </nav>
+    {% endif %}
+
+    {% set content_classes = 'containerPage content_layout' %}
+    {% if page.sidebar_first or page.sidebar_second %}
+      {% set content_classes = content_classes ~ ' content_sidebar' %}
+    {% endif %}
+
+    <div class="{{ content_classes }}">
+
+      {% if (theme_hook_suggestions.0 in 'page__fldm') %}
+        {{ drupal_entity('block', 'ndcm_theme_messages') }}
+      {% elseif logged_in %}
+        {{ drupal_entity('block', 'ndcm_theme_messages') }}
+      {% endif %}
+
+      {% if page.sidebar_first %}
+      <aside class="main-first layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+      {% endif %}
+
+      <section class="main-content">
+        {% if page.content_top %}
+          {{ page.content_top }}
+        {% endif %}
+        <article class="body">
+          {{ page.content }}
+          {% if page.content_bottom %}
+            {{ page.content_bottom }}
+          {% endif %}
+        </article>
+      </section>
+
+      {% if page.sidebar_second %}
+      <aside class="main-second layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+      {% endif %}
+    </div>
+
+  </main>
+
+  {% include "@ndcm_theme/regions/footer.html.twig" ignore missing %}
+  {% include "@ndcm_theme/components/sprite.html.twig" ignore missing %}
+  {% include "@ndcm_theme/components/modal_search.html.twig" ignore missing %}
+
+</div>
+
+#}

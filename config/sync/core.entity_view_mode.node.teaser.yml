@@ -1,5 +1,5 @@
 uuid: feccd145-dcae-489b-a422-2a253c2d8e22
-langcode: en
+langcode: es
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: KgGJDZFpMaz_8bTv6fN1bXS3Qi5LWmRJI9R53kEGsNQ
 id: node.teaser
-label: Teaser
+label: Resumen
 description: ''
 targetEntityType: node
 cache: true
