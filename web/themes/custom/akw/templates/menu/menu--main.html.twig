@@ -6,13 +6,13 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('flex footer__menu menu__column') }}>
+      <ul{{ attributes.addClass('flex header__menu menu__column') }}>
     {% else %}
-      <ul class="footer__menu-s{{ menu_level }}">
+      <ul class="header__menu-s{{ menu_level }}">
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes.addClass(menu_level == 0 ? 'footer__menu-item' : 'footer__menu-item-s' ~ menu_level) }}>
-        {{ link(item.title, item.url, {'class': menu_level == 0 ? 'footer__menu-link' : 'footer__menu-link-s' ~ menu_level}) }}
+      <li{{ item.attributes.addClass(menu_level == 0 ? 'header__menu-item' : 'header__menu-item-s' ~ menu_level) }}>
+        {{ link(item.title, item.url, {'class': menu_level == 0 ? 'header__menu-link' : 'header__menu-link-s' ~ menu_level}) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
@@ -21,3 +21,4 @@
     </ul>
   {% endif %}
 {% endmacro %}
+

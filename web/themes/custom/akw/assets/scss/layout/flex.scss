@@ -2,7 +2,6 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  gap: clamp(1rem, -5rem + 10.6667vw, 3rem);
   &_one {
     flex: 1;
   }

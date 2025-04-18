@@ -8,8 +8,8 @@ img, svg {
 
 body {
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
-  font-size: clamp(0.8rem, 1vw + 0.5rem, 1.25rem);
-  color: #333;
+  font-size: clamp(.875rem,.7917rem + .4444vw,1.125rem);
+  color: #555;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -83,4 +83,19 @@ input, button, textarea, select {
 .sr-only,
 [hidden] {
   display: none;
+}
+
+.akw {
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
+  position: relative;
+}
+.main {
+  flex: 1;
+}
+
+.logo {
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 1.25rem);
+  font-weight: normal;
 }

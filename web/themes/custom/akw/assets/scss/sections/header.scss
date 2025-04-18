@@ -1,0 +1,28 @@
+.header {
+  box-shadow: 0 .5625rem 1.125rem 0 rgba(0,0,0,.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+  &__container {
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding-inline: 1vw;
+  }
+  &__menu {
+    &-item {
+      position: relative;
+    }
+    &-link {
+      display: flex;
+      padding: .5rem;
+      line-height: 1;
+    }
+    &-s1 {
+      position: absolute;
+      top: 100%;
+      background-color: yellow;
+    }
+  }
+}

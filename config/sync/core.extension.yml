@@ -83,6 +83,7 @@ module:
   views_ui: 0
   weight: 0
   pathauto: 1
+  content_translation: 10
   views: 10
   paragraphs: 11
   twigsuggest: 100

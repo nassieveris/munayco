@@ -3,4 +3,11 @@
 
 @use 'sections/footer' as footer;
 @use 'sections/header' as header;
+@use 'sections/burger' as burger;
+@use 'sections/banner' as banner;
 @use 'sections/hero' as hero;
+@use 'sections/body' as body;
+
+@use 'components/title' as title;
+
+@use 'admin/tasks' as tasks;

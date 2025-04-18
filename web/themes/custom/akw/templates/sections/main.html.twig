@@ -1,0 +1,30 @@
+<main class="main">
+
+  {% include "@akw/sections/banner.html.twig" ignore missing %}
+
+  {% if logged_in %}
+  <div class="main-logged-in container">
+    {% if page.primary_menu %}
+      {{ page.primary_menu }}
+    {% endif %}
+    {% if page.secondary_menu %}
+      {{ page.secondary_menu }}
+    {% endif %}
+
+    {% if page.breadcrumb %}
+      {{ page.breadcrumb }}
+    {% endif %}
+
+    {% if page.featured %}
+      {{ page.featured }}
+    {% endif %}
+
+    {% if page.help %}
+      {{ page.help }}
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% include "@akw/sections/body.html.twig" ignore missing %}
+
+</main>

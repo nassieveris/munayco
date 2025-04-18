@@ -1,7 +1,14 @@
 uuid: 526b22f9-72b4-409e-99f5-cf40c405c705
 langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: Fe3N1uqaAyyKJbVkqT-btXy3t98puW8GCRD822xjl10
 name: Artículo

@@ -1,0 +1,14 @@
+<header class="header">
+  <div class="container flex header__container">
+    {% set logo_tag = is_front ? 'h1' : 'div' %}
+    <{{ logo_tag }} id="logo" class="logo">
+        <a href="{{ path('<front>') }}"><img src="/path/to/logo.svg" alt="Nombre del sitio"></a>
+    </{{ logo_tag }}>
+    {{ drupal_menu('main') }}
+    {{ drupal_menu('header') }}
+    <button id="headerBurger" class="header__burger">
+      <span class="material-symbols-outlined">&#xe5d2;</span>
+      <span><span class="text">Menu</span><span class="text">Cerrar</span></span>
+    </button>
+  </div>
+</header>

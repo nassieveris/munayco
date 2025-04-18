@@ -1,0 +1,40 @@
+.burger {
+  position: fixed;
+  background-color: hsla(100deg,51%,40%,.4);
+  width: 100%;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: flex-end;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform 0.25s ease-in-out;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+
+  &_active {
+    transform: translateX(0%);
+  }
+  &__container {
+    background-color: hsl(147deg,100%,22%);
+    flex-basis: clamp(38ch, 50%, 100%);
+    padding-block: 10vw;
+    padding-inline: 5vw;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  small {
+    display: block;
+    color: white;
+  }
+  hr {
+    border-color: wheat;
+    border-bottom: none;
+    margin-block: 1rem;
+  }
+  &_show {
+    .header & {
+      display: none;
+    }
+  }
+}

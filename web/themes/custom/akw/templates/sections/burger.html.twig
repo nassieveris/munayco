@@ -1,0 +1,10 @@
+<nav id="burger" class="burger">
+  <div class="burger__container">
+    {{ drupal_menu('main') }}
+    <hr>
+    {{ drupal_menu('header') }}
+    {{ drupal_menu('footer') }}
+    <hr>
+    {% include "@akw/elements/copyright.html.twig" ignore missing %}
+  </div>
+</nav>

@@ -1,0 +1,19 @@
+<div class="body">
+  <div class="container">
+
+      {% if page.sidebar_first %}
+      <aside class="main-first layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+      {% endif %}
+
+      {{ page.content }}
+
+      {% if page.sidebar_second %}
+      <aside class="main-second layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+      {% endif %}
+
+  </div>
+</div>

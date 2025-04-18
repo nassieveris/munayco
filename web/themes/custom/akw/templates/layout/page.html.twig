@@ -1,42 +1,11 @@
 
-  {% if logged_in %}
-  <div class="main-logged-in">
-    {% if page.primary_menu %}
-      {{ page.primary_menu }}
-    {% endif %}
-    {% if page.secondary_menu %}
-      {{ page.secondary_menu }}
-    {% endif %}
+  {% include "@akw/sections/header.html.twig" ignore missing %}
 
-    {% if page.breadcrumb %}
-      {{ page.breadcrumb }}
-    {% endif %}
-
-    {% if page.featured %}
-      {{ page.featured }}
-    {% endif %}
-
-    {% if page.help %}
-      {{ page.help }}
-    {% endif %}
-  </div>
-  {% endif %}
-
-  {% if page.sidebar_first %}
-  <aside class="main-first layout-sidebar-first" role="complementary">
-    {{ page.sidebar_first }}
-  </aside>
-  {% endif %}
-
-  {{ page.content }}
-
-  {% if page.sidebar_second %}
-  <aside class="main-second layout-sidebar-second" role="complementary">
-    {{ page.sidebar_second }}
-  </aside>
-  {% endif %}
+  {% include "@akw/sections/main.html.twig" ignore missing %}
 
   {% include "@akw/sections/footer.html.twig" ignore missing %}
+
+  {% include "@akw/sections/burger.html.twig" ignore missing %}
 
 
 {#}

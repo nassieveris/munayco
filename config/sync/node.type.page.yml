@@ -1,7 +1,14 @@
 uuid: f0a8ffe7-d530-4480-94eb-0b73be24e6f9
 langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: i0snV8Wj--OkRW12UdachUiYiz3FbeMwHu_pZYfzKLc
 name: 'Página básica'

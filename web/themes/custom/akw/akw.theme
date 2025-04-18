@@ -1,0 +1,8 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function ndcm_theme_preprocess_page(&$variables) {
+  // Ensure the page title is available in the page array for templates
+  $variables['page']['#title'] = $variables['page_title'];
+}

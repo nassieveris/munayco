@@ -1,0 +1,18 @@
+.tasks {
+  &-items {
+    justify-content: center;
+    gap: 1rem;
+  }
+  &-link {
+    padding: .5rem;
+    line-height: 1;
+    background-color: green;
+    color: wheat;
+    display: inline-block;
+    transition: .25s all;
+    &.is-active {
+      background-color: wheat;
+      color: green;
+    }
+  }
+}
