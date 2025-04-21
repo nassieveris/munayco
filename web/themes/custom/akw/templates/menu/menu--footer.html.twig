@@ -8,7 +8,7 @@
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('flex footer__menu menu__column') }}>
     {% else %}
-      <ul class="header__menu-s{{ menu_level }}">
+      <ul class="footer__menu-s{{ menu_level }}">
     {% endif %}
     {% for item in items %}
       {% set li_classes = [
