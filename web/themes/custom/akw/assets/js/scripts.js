@@ -26,7 +26,7 @@ const replaceClassPrefixes = (element) => {
   const classMappings = [
     { prefix: 'header__menu', replacement: 'burger__menu' },
     { prefix: 'header__buttons', replacement: 'burger__submenu' },
-    { prefix: 'footer__buttons', replacement: 'burger__submenu' },
+    { prefix: 'footer__menu', replacement: 'burger__submenu' },
     { prefix: 'menu__column', replacement: '', action: 'remove' }
   ];
 

@@ -8,11 +8,18 @@
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('flex header__buttons menu__column') }}>
     {% else %}
-      <ul class="header__buttons-s{{ menu_level }}">
+      <ul class="header__menu-s{{ menu_level }}">
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes.addClass(menu_level == 0 ? 'header__buttons-item' : 'header__buttons-item-s' ~ menu_level) }}>
-        {{ link(item.title, item.url, {'class': menu_level == 0 ? 'header__buttons-link' : 'header__buttons-link-s' ~ menu_level}) }}
+      {% set li_classes = [
+        menu_level == 0 ? 'header__buttons-item' : 'header__buttons-item-s' ~ menu_level,
+        item.is_expanded ? 'expanded' : '',
+        item.is_active ? 'active' : '',
+        item.in_active_trail ? 'active-trail' : ''
+      ] %}
+      <li{{ item.attributes.addClass(li_classes) }}>
+        {% set link_attributes = item.link_attributes|default(create_attribute()) %}
+        {{ link(item.title, item.url, link_attributes.addClass(menu_level == 0 ? 'header__buttons-link' : 'header__buttons-link-s' ~ menu_level)) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
@@ -21,4 +28,3 @@
     </ul>
   {% endif %}
 {% endmacro %}
-

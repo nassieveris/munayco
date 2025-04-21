@@ -1,0 +1,21 @@
+a {
+  position: relative;
+  &.is-active::after,
+  &:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    background-color: hsla(100deg,51%,40%,.5);
+    right: 0;
+    width: 0;
+    z-index: -1;
+    height: 1px;
+    right: 0;
+    transition: .2s all ease-in-out;
+  }
+}

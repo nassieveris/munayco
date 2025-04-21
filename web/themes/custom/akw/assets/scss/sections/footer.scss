@@ -18,9 +18,27 @@
   &_phone {
     align-items: flex-end;
   }
+  &__contact a {
+    color: white;
+    display: inline-block;
+    &::after {
+      z-index: 1;
+      background-color: white;
+    }
+  }
   &__menu {
     li:last-child {
       margin-left: auto;
+    }
+    &-link {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 80%;
+      &::after {
+        z-index: 1;
+        background-color: white;
+      }
     }
   }
   &__copyright {

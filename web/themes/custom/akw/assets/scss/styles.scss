@@ -1,6 +1,8 @@
 @use 'layout/container' as container;
 @use 'layout/flex' as flex;
 
+@use 'elements/links' as links;
+
 @use 'sections/footer' as footer;
 @use 'sections/header' as header;
 @use 'sections/burger' as burger;
