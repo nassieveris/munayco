@@ -102,5 +102,25 @@ input, button, textarea, select {
   font-size: clamp(0.8rem, 1vw + 0.5rem, 1.25rem);
   font-weight: normal;
 }
+.logo_link {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo_link:after {
+  content: none;
+}
+.logo_link svg {
+  min-width: 50px;
+}
+.logo_link svg:last-child {
+  min-width: 125px;
+}
+@media (max-width: 599px) {
+  .logo_link svg:last-child {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=reset.css.map */

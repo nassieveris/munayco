@@ -1,0 +1,19 @@
+uuid: b4a568a5-2426-48b0-bf29-c1dc55cd2583
+langcode: es
+status: true
+dependencies:
+  config:
+    - config_pages.type.site_data
+    - field.storage.config_pages.field_sd_email
+id: config_pages.site_data.field_sd_email
+field_name: field_sd_email
+entity_type: config_pages
+bundle: site_data
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

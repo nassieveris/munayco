@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.services.body
     - field.field.node.services.field_background
     - field.field.node.services.field_summary
+    - field.field.node.services.field_type_service
     - node.type.services
   module:
     - text
@@ -32,4 +33,5 @@ content:
 hidden:
   field_background: true
   field_summary: true
+  field_type_service: true
   langcode: true

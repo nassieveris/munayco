@@ -11,5 +11,8 @@
 @use 'sections/body' as body;
 
 @use 'components/title' as title;
+@use 'components/buttons' as btns;
+@use 'components/badge' as badge;
+@use 'components/share' as share;
 
 @use 'admin/tasks' as tasks;

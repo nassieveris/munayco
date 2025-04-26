@@ -1,0 +1,25 @@
+.btn {
+  padding: .5rem 1rem;
+  color: hsla(100, 51%, 40%, 0.9);
+  border: 2px solid hsla(100, 51%, 40%, 0.9);
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: 1rem;
+  border-radius: 1.5rem;
+  font-weight: 700;
+  font-size: clamp(0.75rem, 0rem + 1.3333vw, 1rem);
+  overflow: hidden;
+  transition: .25s color ease-in-out;
+  &::after {
+    height: 100%;
+    top: 0;
+    background-color: hsla(100, 51%, 40%, 0.9);
+  }
+  &:hover {
+    color: white;
+  }
+  .icon {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,19 @@
+uuid: b8257c23-570c-485e-830e-7dcfa26b571a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.system
+id: node.system.field_summary
+field_name: field_summary
+entity_type: node
+bundle: system
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,21 @@
+uuid: 4cf307fa-293a-46d6-8e95-195fb51498a3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_include_banner
+    - node.type.system
+id: node.system.field_include_banner
+field_name: field_include_banner
+entity_type: node
+bundle: system
+label: 'No Incluir Banner'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

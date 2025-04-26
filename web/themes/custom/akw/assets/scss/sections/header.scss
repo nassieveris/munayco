@@ -6,7 +6,7 @@
   background-color: white;
   &__container {
     justify-content: space-between;
-    gap: 1rem;
+    gap: clamp(0.5rem, -1rem + 2.6667vw, 1rem);
     align-items: center;
     padding-inline: 1vw;
   }
@@ -153,7 +153,7 @@
     }
   }
   &__buttons {
-    gap: 1rem;
+    gap: clamp(0.5rem, -1rem + 2.6667vw, 1rem);
     &-link {
       border: 1px solid #007133;
       padding: .5rem 1rem;
@@ -199,8 +199,9 @@
     font-size: 10px;
     text-transform: uppercase;
     justify-content: center;
-    height: 3.25rem;
-    width: 3.25rem;
+    height: 3rem;
+    width: 3rem;
+    margin-block: .25rem;
     span span {
       &:last-child {
         display: none;

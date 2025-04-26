@@ -11,7 +11,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=DM+Serif+Text&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,1,0&display=swap" rel="stylesheet">
   </head>
-  {% set body_classes = logged_in ? 'log-in' : 'log-out' %}
+  {% set body_classes = [] %}
+  {% if logged_in %}
+    {% set body_classes = body_classes|merge(['log-in']) %}
+  {% else %}
+    {% set body_classes = body_classes|merge(['log-out']) %}
+  {% endif %}
+  {% if node_type %}
+    {% set body_classes = body_classes|merge([node_type]) %}
+  {% endif %}
+  {% if entity_type %}
+    {% set body_classes = body_classes|merge([entity_type]) %}
+  {% endif %}
   <body{{ attributes.addClass(body_classes) }}>
     <a href="#main" class="visually-hidden focusable">
       {{ 'Skip to main content'|t }}

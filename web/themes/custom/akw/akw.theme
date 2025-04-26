@@ -1,8 +1,75 @@
 <?php
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\config_pages\Entity\ConfigPages;
 
-function ndcm_theme_preprocess_page(&$variables) {
-  // Ensure the page title is available in the page array for templates
-  $variables['page']['#title'] = $variables['page_title'];
+function akw_preprocess(array &$variables, $hook) {
+  $site_data = \Drupal\config_pages\Entity\ConfigPages::config('site_data');
+
+  if ($site_data) {
+    $variables['telefono'] = $site_data->hasField('field_sd_telefono') && !$site_data->get('field_sd_telefono')->isEmpty()
+      ? $site_data->get('field_sd_telefono')->get(0)->value
+      : '';
+    $variables['email'] = $site_data->hasField('field_sd_email') && !$site_data->get('field_sd_email')->isEmpty()
+      ? $site_data->get('field_sd_email')->get(0)->value
+      : '';
+    $variables['isotipo'] = $site_data->hasField('field_sd_isotipo') && !$site_data->get('field_sd_isotipo')->isEmpty()
+      ? $site_data->get('field_sd_isotipo')->get(0)->value
+      : '';
+    $variables['logotipo'] = $site_data->hasField('field_sd_logotipo') && !$site_data->get('field_sd_logotipo')->isEmpty()
+      ? $site_data->get('field_sd_logotipo')->get(0)->value
+      : '';
+    $variables['#cache']['tags'][] = 'config_pages:' . $site_data->id();
+  }
+  else {
+    // Provide default values or handle the absence of the configuration page.
+    $variables['telefono'] = '';
+    $variables['email'] = '';
+    $variables['isotipo'] = '';
+    $variables['logotipo'] = '';
+  }
+
+  // Preprocess entity type for use in templates.
+  $route_match = \Drupal::service('current_route_match');
+  $entity_type = '';
+  $parameters = $route_match->getParameters()->all(); // Convert ParameterBag to array.
+
+  // Initialize specific variables.
+  $variables['is_node'] = false;
+  $variables['is_user'] = false;
+  $variables['is_view'] = false;
+  $variables['is_taxonomy'] = false;
+
+  foreach ($parameters as $key => $value) {
+    // Check if the parameter is an entity and determine its type.
+    if ($value instanceof \Drupal\Core\Entity\EntityInterface) {
+      $entity_type = 'entity_' . $value->getEntityTypeId();
+
+      // Set specific variables based on the entity type.
+      if ($value->getEntityTypeId() === 'node') {
+        $variables['is_node'] = true;
+        // Add content type as a class with the prefix 'node_'.
+        $variables['node_type'] = 'node_' . $value->bundle();
+      } elseif ($value->getEntityTypeId() === 'user') {
+        $variables['is_user'] = true;
+      } elseif ($value->getEntityTypeId() === 'taxonomy_term') {
+        $variables['is_taxonomy'] = true;
+      }
+      break;
+    }
+  }
+
+  // Dynamically check if the current route is a view.
+  $route_name = $route_match->getRouteName() ?? '';
+  if (empty($entity_type) && strpos($route_name, 'view.') === 0) {
+    $entity_type = 'entity_view';
+    $variables['is_view'] = true;
+  }
+
+  $variables['entity_type'] = $entity_type;
+
+  // Ensure node_type is always defined.
+  if (!isset($variables['node_type'])) {
+    $variables['node_type'] = '';
+  }
 }

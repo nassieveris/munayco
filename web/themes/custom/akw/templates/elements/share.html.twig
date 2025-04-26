@@ -1,0 +1,25 @@
+<div class="share">
+  <h5 class="share-title">{{ 'Comparte el sitio a través de:'|t }}</h5>
+  <ul class="share-list">
+    <li>
+      <a class="share-link" href="https://www.facebook.com/sharer/sharer.php?u={{ url('<current>', {'absolute': true})|raw }}" target="_blank">
+      Facebook
+      </a>
+    </li>
+    <li>
+      <a class="share-link" href="https://twitter.com/intent/tweet?url={{ url('<current>') }}&text={{ node.title.value }}" target="_blank">
+      Twitter
+      </a>
+    </li>
+    <li>
+      <a class="share-link" href="http://www.linkedin.com/shareArticle?mini=true&url={{ url('<current>') }}&title={{ node.title.value }}" target="_blank">
+      Linkedin
+      </a>
+    </li>
+    <li>
+      <a class="share-link" href="whatsapp://send?text=Conozca sobre '{{ node.title.value }}' Visite: {{ url('<current>') }}" data-action="share/whatsapp/share">
+      Whatsapp
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,4 +1,80 @@
 .body {
   padding-top: clamp(1.5rem, -3rem + 8vw, 3rem);
   padding-bottom: clamp(5rem, -10rem + 26.6667vw, 10rem);
+  &__summary {
+    color: black;
+    font-size: clamp(1.25rem,1.1739rem + .4348vw,1.5rem);
+    text-align: justify;
+    & + .body__article,
+    & + .body__cols {
+      margin-top: 1rem;
+    }
+    .node_system & {
+      @media (min-width: 1200px) {
+        max-width: 50%;
+      }
+    }
+  }
+  &__article {
+    text-align: justify;
+    & > :not(:first-child) {
+      margin-top: 1rem;
+    }
+    ul li {
+      padding-left: 2rem;
+      position: relative;
+      &:not(:first-child) {
+        margin-top: .5rem;
+      }
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 10px;
+        background-color: hsl(147, 100%, 22%);
+      }
+    }
+    .body__cols & {
+      @media (min-width: 1200px) {
+        flex: 1;
+      }
+    }
+  }
+  &__cols {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 4rem;
+  }
+  h3, h4, h5, h6 {
+    font-family: "DM Serif Text", serif;
+    line-height: 1.25;
+  }
+  h3, h4, h5, h6, strong, b {
+    color: hsl(147deg,100%,22%);
+    font-weight: 400;
+  }
+  h3 {
+    font-size: clamp(1.25rem,1.1739rem + .4348vw,1.5rem);
+  }
+  h4 {
+    font-size: clamp(1.125rem,1.0869rem + .3696vw,1.375rem);
+  }
+  h5 {
+    font-size: clamp(1rem,1rem + .3043vw,1.25rem);
+  }
+  h6 {
+    font-size: clamp(.875rem,.7917rem + .4444vw,1.125rem);
+  }
+  blockquote {
+    background: #e6f0e1;
+    padding: 2rem;
+    color: hsl(147deg,100%,22%);
+    border-radius: 1rem;
+  }
+  img {
+    border-radius: 2rem;
+  }
 }

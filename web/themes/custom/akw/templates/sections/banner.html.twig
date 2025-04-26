@@ -1,5 +1,33 @@
-<section class="banner">
-  <div class="container">
-    <h1 class="title" id="title">{{ page['#title'] }}</h1>
-  </div>
-</section>
+{% if not (is_node and node.field_include_banner.value) %}
+  {% set banner_class = is_view or is_taxonomy or (is_node and node.getType() in ['system', 'article']) ? 'banner__green' : 'banner__soft' %}
+  <section class="banner {{ banner_class }}">
+    <div class="container banner_container">
+      {% if (is_node and node.field_type_service.value) %}
+      <small class="badge">{{ node.field_type_service.entity.parent.entity.name.value }}</small>
+      {% endif %}
+      {% if (is_node and node.getType() in ['article']) %}
+      <small class="banner_date">{{ node.getCreatedTime|format_date('custom', 'F j, Y') }}</small>
+      {% endif %}
+      <h1 class="title" id="title">{{ page['#title'] }}</h1>
+      {% if (is_node and node.field_subtitle.value) %}
+      <h2 class="title-sub">
+        {{ node.field_subtitle.value|raw }}
+      </h2>
+      {% endif %}
+      {% if (is_node and node.getType() in ['services']) %}
+      <a href="#asesoria" class="btn btn__cta" id="cta">
+        <span>Necesito Asesoría</span>
+        <span class="icon material-symbols-outlined">arrow_forward</span>
+      </a>
+      {% endif %}
+      {% if (is_node and node.getType() in ['article']) %}
+        {% include "@akw/elements/share.html.twig" ignore missing %}
+      {% endif %}
+      {% if (is_node and node.field_background.value) %}
+      <img class="banner__background"
+        alt="{{ node.field_background.entity.field_media_image.alt }}" width="960" height="420"
+        src="{{ file_url(node.field_background.entity.field_media_image.entity.fileuri | image_style('960x420') ) }}" />
+      {% endif %}
+    </div>
+  </section>
+{% endif %}

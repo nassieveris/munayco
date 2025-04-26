@@ -1,7 +1,12 @@
 .title {
   font-size: clamp(1.6875rem, -4.5rem + 11vw, 3.75rem);
-  line-height: 1.1;
+  line-height: 1.015;
   color: hsla(100deg,51%,40%,.9);
   font-family: "DM Serif Text",serif;
   font-weight: 400;
+  &-sub {
+    font-size: clamp(1rem, -0.5rem + 2.6667vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1.125;
+  }
 }

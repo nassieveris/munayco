@@ -1,0 +1,11 @@
+{% if (is_node and node.field_summary.value) %}
+  <div class="body__summary"><p>{{ node.field_summary.value|raw }}</p></div>
+{% endif %}
+<section class="body__cols">
+{% if (is_node and node.field_col_1.value) %}
+  <div class="body__article">{{ node.field_col_1.value|raw }}</div>
+{% endif %}
+{% if (is_node and node.field_col_2.value) %}
+  <div class="body__article">{{ node.field_col_2.value|raw }}</div>
+{% endif %}
+</section>

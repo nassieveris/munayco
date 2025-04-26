@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.services.body
     - field.field.node.services.field_background
     - field.field.node.services.field_summary
+    - field.field.node.services.field_type_service
     - node.type.services
   module:
     - text
@@ -37,6 +38,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_type_service:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     settings: {  }

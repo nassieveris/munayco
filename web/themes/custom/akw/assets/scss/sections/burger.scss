@@ -18,7 +18,7 @@
   &__container {
     background-color: hsl(147deg,100%,22%);
     flex-basis: clamp(38ch, 50%, 100%);
-    padding-block: 10vw;
+    padding-block: clamp(5rem, -10rem + 26.6667vw, 10rem);
     padding-inline: 5vw;
     max-height: 100vh;
     overflow-y: auto;

@@ -1,0 +1,19 @@
+uuid: 38b521b3-990e-41df-a1b7-6e93350fa0ca
+langcode: es
+status: true
+dependencies:
+  config:
+    - config_pages.type.site_data
+    - field.storage.config_pages.field_sd_telefono
+id: config_pages.site_data.field_sd_telefono
+field_name: field_sd_telefono
+entity_type: config_pages
+bundle: site_data
+label: Teléfono
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

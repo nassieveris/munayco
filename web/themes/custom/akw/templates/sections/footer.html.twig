@@ -2,14 +2,18 @@
     <div class="container flex_column">
       {{ drupal_menu('footer') }}
       <div class="footer__contact flex">
+        {% if email %}
         <div class="footer_mail flex_one flex_column">
           <small class="flex_inline"><span class="material-symbols-outlined"></span> Correo Electrónico:</small>
-          <span><a href="mailto:maria@munayco.consulting">maria@munayco.consulting</a></span>
+          <span><a href="mailto:{{ email|raw }}">{{ email|raw }}</a></span>
         </div>
+        {% endif %}
+        {% if telefono %}
         <div class="footer_phone flex_one flex_column">
           <small class="flex_inline"><span class="material-symbols-outlined"></span> Teléfono:</small>
-          <span><a href="tel:+51993917335">993917335</a></span>
+          <span><a href="tel:+51{{ telefono|raw }}">{{ telefono|raw }}</a></span>
         </div>
+        {% endif %}
       </div>
       <div class="footer__copyright">
         {% include "@akw/elements/copyright.html.twig" ignore missing %}

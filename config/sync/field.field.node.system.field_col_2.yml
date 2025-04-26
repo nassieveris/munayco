@@ -1,0 +1,24 @@
+uuid: 04f3741e-ea3a-41a6-85d2-be8383c27a81
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_col_2
+    - filter.format.full_html
+    - node.type.system
+  module:
+    - text
+id: node.system.field_col_2
+field_name: field_col_2
+entity_type: node
+bundle: system
+label: 'Columna 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long
