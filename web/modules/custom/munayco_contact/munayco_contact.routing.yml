@@ -1,0 +1,9 @@
+munayco_contact.contact_form:
+  path: '/munayco-contact'
+  defaults:
+    _form: '\Drupal\munayco_contact\Form\MunaycoContactForm'
+    _title: 'Munayco Contact Form'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

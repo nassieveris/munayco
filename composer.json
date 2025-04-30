@@ -16,8 +16,10 @@
     ],
     "require": {
         "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.5",
         "drupal/config_pages": "^2.17",
+        "drupal/contact_default_fields_override": "^2.2",
         "drupal/contact_emails": "^1.24",
         "drupal/contact_storage": "^1.4",
         "drupal/contact_storage_export": "^1.16",
@@ -55,6 +57,7 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
@@ -101,6 +104,23 @@
             "recipes/{$name}": [
                 "type:drupal-recipe"
             ]
+        },
+        "patches": {
+            "drupal/twig_tweak": {
+                "PHP 8.4 deprecated": "https://www.drupal.org/files/issues/2025-04-14/3500245-8.patch"
+            },
+            "drupal/config_pages": {
+                "PHP 8.4 deprecated": "https://www.drupal.org/files/issues/2025-04-14/3506256-config-pages-9.patch"
+            },
+            "drupal/metatag": {
+                "PHP 8.4 deprecated": "https://www.drupal.org/files/issues/2025-01-08/metatag-3495867-deprecation-php-84.patch"
+            },
+            "drupal/contact_storage": {
+                "PHP 8.4 deprecated": "https://www.drupal.org/files/issues/2025-03-08/contact-storage-3355042.patch"
+            },
+            "drupal/pathauto": {
+                "PHP 8.4 deprecated": "https://www.drupal.org/files/issues/2025-03-06/pathauto-3489108.diff"
+            }
         },
         "drupal-core-project-message": {
             "include-keys": [

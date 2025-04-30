@@ -1,7 +1,20 @@
 uuid: 576afff0-c097-4a12-9d82-fb85a8673e9f
 langcode: es
-status: true
-dependencies: {  }
+status: false
+dependencies:
+  module:
+    - contact_default_fields_override
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    disabled_form_message: 'This contact form has been disabled.'
+  contact_default_fields_override:
+    subject_label: Asunto
+    subject_description: ''
+    subject_required: 0
+    message_label: Mensaje
+    message_description: ''
+    message_required: 0
 _core:
   default_config_hash: jonvgt3CkUM2eMLTFwWfHileWWDC4YtXCuIlCahTk_I
 id: personal

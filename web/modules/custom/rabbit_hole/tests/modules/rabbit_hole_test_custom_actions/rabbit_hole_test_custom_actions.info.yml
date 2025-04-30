@@ -1,0 +1,4 @@
+type: module
+name: Rabbit Hole Test Custom Actions
+description: 'Test module to test Rabbit Hole custom actions.'
+package: Testing

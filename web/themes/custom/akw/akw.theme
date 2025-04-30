@@ -73,3 +73,42 @@ function akw_preprocess(array &$variables, $hook) {
     $variables['node_type'] = '';
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function akw_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Target the "contacto" contact form.
+  if ($form_id === 'contact_message_contacto_form') {
+    // Remove the required property for all fields.
+    if (isset($form['subject']['#required'])) {
+      $form['subject']['#required'] = FALSE;
+    }
+    if (isset($form['name']['#required'])) {
+      $form['name']['#required'] = FALSE;
+    }
+    if (isset($form['message']['#required'])) {
+      $form['message']['#required'] = FALSE;
+    }
+    if (isset($form['mail']['#required'])) {
+      $form['mail']['#required'] = FALSE;
+    }
+
+    // Ensure default values for all fields to avoid null values.
+    if (!isset($form['subject']['#default_value'])) {
+      $form['subject']['#default_value'] = '';
+    }
+    if (!isset($form['message']['#default_value'])) {
+      $form['message']['#default_value'] = '';
+    }
+    if (isset($form['mail']) && !isset($form['mail']['#default_value'])) {
+      $form['mail']['#default_value'] = '';
+    }
+    if (isset($form['name']) && !isset($form['name']['#default_value'])) {
+      $form['name']['#default_value'] = '';
+    }
+
+    // Add a custom submit handler to ensure proper handling of empty values.
+    $form['#submit'][] = 'akw_contacto_form_submit';
+  }
+}

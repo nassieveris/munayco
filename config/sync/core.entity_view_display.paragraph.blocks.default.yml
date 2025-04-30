@@ -1,0 +1,33 @@
+uuid: 42979d80-b665-4344-ad0c-8d78a7db492b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blocks.field_basic_title
+    - field.field.paragraph.blocks.field_blocks_basic
+    - paragraphs.paragraphs_type.blocks
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.blocks.default
+targetEntityType: paragraph
+bundle: blocks
+mode: default
+content:
+  field_basic_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_blocks_basic:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

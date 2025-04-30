@@ -1,0 +1,7 @@
+name: 'Munayco Contact'
+type: module
+description: 'Provides a custom contact form using the Contact module.'
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - drupal:contact

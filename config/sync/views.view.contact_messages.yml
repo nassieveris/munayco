@@ -2,9 +2,13 @@ uuid: 97e46add-3774-4127-85d2-5bfc05b664ba
 langcode: es
 status: true
 dependencies:
+  config:
+    - field.storage.contact_message.field_contact_phone
+    - field.storage.contact_message.telephone
   module:
     - contact
     - contact_storage
+    - telephone
     - user
 _core:
   default_config_hash: CXVRh_DPhvejgGSTKcMmf2mPo2O8DkmlRC36Rqpp3_g
@@ -77,6 +81,121 @@ display:
           action_title: 'Con selección'
           include_exclude: exclude
           selected_actions: {  }
+        contact_form_label:
+          id: contact_form_label
+          table: contact_message
+          field: contact_form_label
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: contact_message
+          plugin_id: contact_form
+          label: 'Formulario de contacto'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        name:
+          id: name
+          table: contact_message
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: contact_message
+          entity_field: name
+          plugin_id: field
+          label: 'Nombre el remitente'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         subject:
           id: subject
           table: contact_message
@@ -142,17 +261,79 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        name:
-          id: name
+        mail:
+          id: mail
           table: contact_message
-          field: name
+          field: mail
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: contact_message
-          entity_field: name
+          entity_field: mail
           plugin_id: field
-          label: "Sender's name"
+          label: 'Correo electrónico del remitente'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        telephone:
+          id: telephone
+          table: contact_message__telephone
+          field: telephone
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Teléfono
           exclude: false
           alter:
             alter_text: false
@@ -207,16 +388,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        contact_form_label:
-          id: contact_form_label
+        message:
+          id: message
           table: contact_message
-          field: contact_form_label
+          field: message
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: contact_message
-          plugin_id: contact_form
-          label: 'Formulario de contacto'
+          entity_field: message
+          plugin_id: field
+          label: Mensaje
           exclude: false
           alter:
             alter_text: false
@@ -257,6 +439,19 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         created:
           id: created
           table: contact_message
@@ -362,6 +557,69 @@ display:
           empty_zero: false
           hide_alter_empty: true
           destination: true
+        field_contact_phone:
+          id: field_contact_phone
+          table: contact_message__field_contact_phone
+          field: field_contact_phone
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Teléfono
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: telephone_link
+          settings:
+            title: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
         type: full
         options:
@@ -508,7 +766,9 @@ display:
         - url
         - url.query_args
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.contact_message.field_contact_phone'
+        - 'config:field.storage.contact_message.telephone'
       cacheable: false
   page_1:
     id: page_1
@@ -534,5 +794,7 @@ display:
         - url
         - url.query_args
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.contact_message.field_contact_phone'
+        - 'config:field.storage.contact_message.telephone'
       cacheable: false

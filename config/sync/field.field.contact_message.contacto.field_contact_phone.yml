@@ -1,0 +1,21 @@
+uuid: 16bb00ed-c324-4adc-a5f9-a478646c1231
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.contacto
+    - field.storage.contact_message.field_contact_phone
+  module:
+    - telephone
+id: contact_message.contacto.field_contact_phone
+field_name: field_contact_phone
+entity_type: contact_message
+bundle: contacto
+label: Teléfono
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

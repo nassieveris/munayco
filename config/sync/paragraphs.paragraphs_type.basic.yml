@@ -1,0 +1,10 @@
+uuid: 41b35798-e74c-463f-a0ae-672c2b07ff4b
+langcode: es
+status: true
+dependencies: {  }
+id: basic
+label: Basico
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

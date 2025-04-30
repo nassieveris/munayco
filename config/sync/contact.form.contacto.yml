@@ -1,0 +1,29 @@
+uuid: 790c75f3-bd36-48f5-880c-a71b6c469276
+langcode: es
+status: false
+dependencies:
+  module:
+    - contact_default_fields_override
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Enviar
+    show_preview: false
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+  contact_default_fields_override:
+    message_label: Mensaje
+    message_description: ''
+    message_required: 0
+    subject_label: Asunto
+    subject_description: ''
+    subject_required: 0
+id: contacto
+label: 'Formulario Contacto Service'
+recipients:
+  - gino.nassi@gmail.com
+reply: "Gracias por enviarnos su formulario. Hemos recibido su información correctamente y nuestro equipo lo revisará a la brevedad.\r\nNos pondremos en contacto con usted pronto para brindarle una respuesta o el siguiente paso en el proceso.\r\nAgradecemos su interés y quedamos a su disposición para cualquier consulta adicional."
+weight: 0
+message: "Gracias por enviarnos su formulario. Hemos recibido su información correctamente y nuestro equipo lo revisará a la brevedad.\r\nNos pondremos en contacto con usted pronto para brindarle una respuesta o el siguiente paso en el proceso.\r\nAgradecemos su interés y quedamos a su disposición para cualquier consulta adicional."
+redirect: ''

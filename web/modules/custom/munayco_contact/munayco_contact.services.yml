@@ -1,0 +1,9 @@
+services:
+  # Remove the unused EmailService definition.
+  # munayco_contact.email_service:
+  #   class: Drupal\munayco_contact\Service\EmailService
+  #   arguments: ['@plugin.manager.mail', '@language_manager', '@logger.factory']
+
+  munayco_contact.phpmailer_service:
+    class: Drupal\munayco_contact\Service\PHPMailerService
+    arguments: ['@logger.factory']

@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.node.system.field_blocks
     - field.field.node.system.field_col_1
     - field.field.node.system.field_col_2
     - field.field.node.system.field_include_banner
@@ -10,6 +11,7 @@ dependencies:
     - field.field.node.system.field_summary
     - node.type.system
   module:
+    - entity_reference_revisions
     - text
     - user
 id: node.system.default
@@ -17,6 +19,15 @@ targetEntityType: node
 bundle: system
 mode: default
 content:
+  field_blocks:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
   field_col_1:
     type: text_default
     label: above

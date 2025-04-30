@@ -1,0 +1,24 @@
+uuid: 5c44cf8c-f018-42f2-a2b9-de82ae7fb095
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.basic
+  module:
+    - text
+id: paragraph.basic.field_basic_title
+field_name: field_basic_title
+entity_type: paragraph
+bundle: basic
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

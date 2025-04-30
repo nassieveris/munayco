@@ -1,0 +1,21 @@
+uuid: b6469689-ea2e-4036-9831-793f94590865
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: 'Enviar mensaje'
+    show_preview: true
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+id: munayco_contact
+label: 'Munayco Contact'
+recipients:
+  - gino.nassi@gmail.com
+reply: ok
+weight: 0
+message: hola
+redirect: /node/3

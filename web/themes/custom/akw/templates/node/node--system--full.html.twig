@@ -9,3 +9,6 @@
   <div class="body__article">{{ node.field_col_2.value|raw }}</div>
 {% endif %}
 </section>
+{% if (is_node and node.field_blocks.value) %}
+  {{ content.field_blocks }}
+{% endif %}

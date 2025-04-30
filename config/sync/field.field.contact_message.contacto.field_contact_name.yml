@@ -1,0 +1,19 @@
+uuid: e597e202-df7c-4eb8-9b73-87ee8f94c890
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.contacto
+    - field.storage.contact_message.field_contact_name
+id: contact_message.contacto.field_contact_name
+field_name: field_contact_name
+entity_type: contact_message
+bundle: contacto
+label: 'Nombre y Apellidos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,4 @@
+type: module
+name: Rabbit Hole Test Hooks
+description: 'Test module to test Rabbit Hole hooks.'
+package: Testing

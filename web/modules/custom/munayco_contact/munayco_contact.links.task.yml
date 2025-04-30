@@ -1,0 +1,5 @@
+munayco_contact.contact_form_tab:
+  title: 'Munayco Contact Form'
+  route_name: munayco_contact.contact_form
+  base_route: entity.contact_form.collection
+  weight: 10

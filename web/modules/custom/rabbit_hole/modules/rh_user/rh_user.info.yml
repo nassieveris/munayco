@@ -1,0 +1,9 @@
+name: Rabbit Hole users
+type: module
+description: Adds Rabbit Hole functionality for users.
+core_version_requirement: ^9.5 || ^10 || ^11
+dependencies:
+  - rabbit_hole:rabbit_hole
+  - drupal:user
+lifecycle: deprecated
+lifecycle_link: 'https://www.drupal.org/node/3359194'

@@ -15,6 +15,7 @@ module:
   config_pages: 0
   config_translation: 0
   contact: 0
+  contact_default_fields_override: 0
   contact_emails: 0
   contact_storage: 0
   contact_storage_export: 0
@@ -58,6 +59,7 @@ module:
   metatag_open_graph: 0
   metatag_views: 0
   module_filter: 0
+  munayco_contact: 0
   mysql: 0
   navigation: 0
   node: 0

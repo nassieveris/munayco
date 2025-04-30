@@ -1,0 +1,9 @@
+name: Rabbit Hole files
+type: module
+description: Adds Rabbit Hole functionality for files.
+core_version_requirement: ^9.5 || ^10 || ^11
+dependencies:
+  - rabbit_hole:rabbit_hole
+  - file_entity:file_entity
+lifecycle: deprecated
+lifecycle_link: 'https://www.drupal.org/node/3359194'

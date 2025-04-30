@@ -1,0 +1,19 @@
+uuid: c9d06b8e-f229-4f05-9d87-f3bca4bb4917
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.munayco_contact
+    - field.storage.contact_message.telephone
+id: contact_message.munayco_contact.telephone
+field_name: telephone
+entity_type: contact_message
+bundle: munayco_contact
+label: Teléfono
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

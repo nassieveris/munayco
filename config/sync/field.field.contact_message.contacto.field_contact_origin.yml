@@ -1,0 +1,19 @@
+uuid: 1e924599-46b4-4804-ae3e-3cc91ae4db15
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.contacto
+    - field.storage.contact_message.field_contact_origin
+id: contact_message.contacto.field_contact_origin
+field_name: field_contact_origin
+entity_type: contact_message
+bundle: contacto
+label: Origen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

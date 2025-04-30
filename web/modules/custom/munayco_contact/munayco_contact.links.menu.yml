@@ -1,0 +1,6 @@
+munayco_contact.contact_form:
+  title: 'Munayco Contact Form'
+  description: 'Access the Munayco Contact Form and manage submissions.'
+  parent: system.admin_config
+  route_name: munayco_contact.contact_form
+  weight: 100

@@ -1,0 +1,24 @@
+uuid: 10b9092c-0330-403a-a5e9-7376dbc71fa3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_text
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.basic
+  module:
+    - text
+id: paragraph.basic.field_basic_text
+field_name: field_basic_text
+entity_type: paragraph
+bundle: basic
+label: Basico
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

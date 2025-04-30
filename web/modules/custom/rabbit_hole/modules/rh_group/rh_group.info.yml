@@ -1,0 +1,9 @@
+name: Rabbit Hole group
+type: module
+description: Adds Rabbit Hole functionality for Group.
+core_version_requirement: ^9.5 || ^10 || ^11
+dependencies:
+  - rabbit_hole:rabbit_hole
+  - group:group
+lifecycle: deprecated
+lifecycle_link: 'https://www.drupal.org/node/3359194'

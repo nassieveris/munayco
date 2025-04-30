@@ -1,0 +1,64 @@
+uuid: b412bcbb-2c54-430e-9542-c9bf6be314d7
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.contacto
+    - field.field.contact_message.contacto.field_contact_email
+    - field.field.contact_message.contacto.field_contact_message
+    - field.field.contact_message.contacto.field_contact_name
+    - field.field.contact_message.contacto.field_contact_origin
+    - field.field.contact_message.contacto.field_contact_phone
+    - field.field.contact_message.contacto.telephone
+  module:
+    - telephone
+id: contact_message.contacto.default
+targetEntityType: contact_message
+bundle: contacto
+mode: default
+content:
+  field_contact_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_contact_message:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_contact_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_contact_origin:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_contact_phone:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  langcode: true
+  mail: true
+  message: true
+  name: true
+  subject: true
+  telephone: true

@@ -1,0 +1,48 @@
+<?php
+
+use Drupal\contact\Entity\ContactForm;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
+
+/**
+ * Implements hook_install().
+ */
+function munayco_contact_install() {
+  // Check if the "Munayco Contact" form already exists.
+  if (!ContactForm::load('munayco_contact')) {
+    // Create a new contact form entity for "Munayco Contact".
+    ContactForm::create([
+      'id' => 'munayco_contact',
+      'label' => 'Munayco Contact',
+      'recipients' => ['admin@example.com'], // Replace with the desired recipient email.
+      'reply' => '',
+      'weight' => 0,
+      'status' => TRUE,
+    ])->save();
+  }
+
+  // Add the 'telephone' field to the contact_message entity type if it doesn't exist.
+  if (!FieldStorageConfig::loadByName('contact_message', 'telephone')) {
+    FieldStorageConfig::create([
+      'field_name' => 'telephone',
+      'entity_type' => 'contact_message',
+      'type' => 'string',
+      'settings' => [
+        'max_length' => 15,
+      ],
+      'cardinality' => 1,
+      'translatable' => FALSE,
+    ])->save();
+  }
+
+  // Add the 'telephone' field to the "Munayco Contact" form bundle if it doesn't exist.
+  if (!FieldConfig::loadByName('contact_message', 'munayco_contact', 'telephone')) {
+    FieldConfig::create([
+      'field_name' => 'telephone',
+      'entity_type' => 'contact_message',
+      'bundle' => 'munayco_contact',
+      'label' => t('Teléfono'),
+      'required' => FALSE,
+    ])->save();
+  }
+}

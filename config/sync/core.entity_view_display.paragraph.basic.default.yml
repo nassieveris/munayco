@@ -1,0 +1,30 @@
+uuid: bdb641bd-8f42-4f6f-bfa7-23c00899c377
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.basic.field_basic_text
+    - field.field.paragraph.basic.field_basic_title
+    - paragraphs.paragraphs_type.basic
+  module:
+    - text
+id: paragraph.basic.default
+targetEntityType: paragraph
+bundle: basic
+mode: default
+content:
+  field_basic_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_basic_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }
