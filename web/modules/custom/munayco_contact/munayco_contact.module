@@ -1,1 +1,34 @@
 <?php
+
+/**
+ * Implements hook_form_alter().
+ */
+function munayco_contact_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Target the specific form by its ID.
+  if ($form_id === 'munayco_contact_form') {
+    // Ensure the form itself has the 'form__table' class.
+    $form['#attributes']['class'][] = 'form__table';
+
+    foreach ($form as $key => &$element) {
+      // Skip non-form elements.
+      if (!is_array($element) || empty($element['#type'])) {
+        continue;
+      }
+
+      // Add the 'form_item' class to the element itself.
+      $element['#attributes']['class'][] = 'form_item';
+
+      // Add the 'form_{tipo_de_campo}' class based on the field type.
+      $element['#attributes']['class'][] = 'form_' . $element['#type'];
+
+      // Add the 'div_item' and 'div_{tipo_de_elemento}' classes to the wrapper <div>.
+      $element['#wrapper_attributes']['class'][] = 'form_div_item';
+      $element['#wrapper_attributes']['class'][] = 'form_div_' . $element['#type'];
+
+      // Add the 'form_label' class to the label element.
+      if (isset($element['#title'])) {
+        $element['#label_attributes']['class'][] = 'form_label';
+      }
+    }
+  }
+}

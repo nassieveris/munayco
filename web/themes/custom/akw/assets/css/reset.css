@@ -79,6 +79,9 @@ fieldset {
 input, button, textarea, select {
   font: inherit;
 }
+input, textarea, select {
+  width: 100%
+}
 
 .visually-hidden,
 .hidden,

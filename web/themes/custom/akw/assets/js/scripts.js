@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  [handleBurgerMenu, updateMenuClasses].forEach(fn => fn());
+  [handleBurgerMenu, updateMenuClasses, populateSubjectField].forEach(fn => fn());
 });
 
 const handleBurgerMenu = () => {
@@ -56,4 +56,10 @@ const updateMenuClasses = () => {
   burger.querySelector('.header__buttons')?.classList.replace('header__buttons', 'burger__menu');
   burger.querySelector('.footer__menu')?.classList.replace('footer__menu', 'burger__menu');
   burger.querySelector('.header__menu')?.classList.replace('header__menu', 'burger__menu_super');
+};
+
+const populateSubjectField = () => {
+  const subjectField = document.querySelector('input[name="subject"]');
+  subjectField?.value = document.title.split('|')[0]?.trim() ?? '';
+  subjectField && (subjectField.readOnly = true);
 };

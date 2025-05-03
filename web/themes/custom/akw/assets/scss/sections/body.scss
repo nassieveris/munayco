@@ -1,6 +1,14 @@
 .body {
   padding-top: clamp(1.5rem, -3rem + 8vw, 3rem);
   padding-bottom: clamp(5rem, -10rem + 26.6667vw, 10rem);
+  &__container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: clamp(1rem, -2rem + 5.3333vw, 2rem);
+    .node_article & {
+      gap: clamp(1rem, -5rem + 10.6667vw, 3rem);
+    }
+  }
   &__summary {
     color: black;
     font-size: clamp(1.25rem,1.1739rem + .4348vw,1.5rem);
@@ -47,6 +55,17 @@
     display: flex;
     flex-flow: row wrap;
     gap: 4rem;
+  }
+  &_content {
+    flex: 2.5;
+  }
+  &_first {
+    flex: .75;
+    order: -1
+  }
+  &_second {
+    flex: 1;
+    order: 1;
   }
   h3, h4, h5, h6 {
     font-family: "DM Serif Text", serif;

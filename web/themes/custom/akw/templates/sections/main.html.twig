@@ -25,6 +25,10 @@
   </div>
   {% endif %}
 
-  {% include "@akw/sections/body.html.twig" ignore missing %}
+  {% if (is_node and node.getType() in ['services', 'article']) %}
+    {% include "@akw/sections/body.html.twig" ignore missing %}
+  {% else %}
+    {{ page.content }}
+  {% endif %}
 
 </main>

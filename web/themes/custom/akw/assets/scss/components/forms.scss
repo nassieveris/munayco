@@ -1,0 +1,60 @@
+.body .form {
+  &_title {
+    font-size: clamp(1rem, -0.5rem + 2.6667vw, 1.5rem);
+    color: #579d34;
+    line-height: 1.125;
+  }
+  &_text {
+    font-size: clamp(0.8125rem, 0.25rem + 1vw, 1rem);
+    color: #333;
+    line-height: 1.125;
+    margin-top: .5rem;
+  }
+  &_small {
+    text-align: center;
+    display: block;
+    line-height: 1.1;
+    margin-bottom: .5rem;
+    color: #333;
+  }
+  &__table {
+    background-color: #e6f0e1;
+    padding: clamp(0.5rem, -1rem + 2.6667vw, 1rem) clamp(1.5rem, 0rem + 2.6667vw, 2rem);
+    border-radius: 1.5rem;
+    margin-block: 1.5rem;
+  }
+  &_div_item {
+    position: relative;
+  }
+  &_label {
+    background-color: #e6f0e1;
+    color: #579d34;
+    text-transform: uppercase;
+    font-size: clamp(0.625rem, 0.25rem + 0.6667vw, 0.75rem);
+    font-weight: 700;
+    position: relative;
+    bottom: -.75rem;
+    padding-inline: .25rem;
+  }
+  &_item {
+    background-color: transparent;
+    border: 1px solid hsla(100deg,51%,40%,.5);
+    font-family: "DM Sans",sans-serif;
+    color: hsl(100deg,51%,40%);
+    padding: .5rem;
+    border-radius: 0 .5rem .5rem .5rem;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  &_submit {
+    background-color: hsl(100deg,51%,40%);
+    color: white;
+    border-radius: 2rem;
+    margin-block: 1rem;
+    transition: .2s background-color;
+    cursor: pointer;
+    &:hover {
+      background-color: hsl(100deg,51%,40%,.8);
+    }
+  }
+}

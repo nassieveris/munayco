@@ -75,14 +75,9 @@ class MunaycoContactForm extends FormBase {
       '#title' => $this->t('Nombre y Apellidos'),
       '#required' => TRUE,
       '#default_value' => '',
-    ];
-
-    // Add a field for "Explícanos tu caso".
-    $form['message'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Explícanos tu caso'),
-      '#required' => TRUE,
-      '#default_value' => '',
+      '#attributes' => [
+        'placeholder' => $this->t('ej. Gia Brunela'),
+      ],
     ];
 
     // Add a field for "Email".
@@ -91,6 +86,9 @@ class MunaycoContactForm extends FormBase {
       '#title' => $this->t('Email'),
       '#required' => TRUE,
       '#default_value' => '',
+      '#attributes' => [
+        'placeholder' => $this->t('ej. gia.brunela@gmail.com'),
+      ],
     ];
 
     // Add a numeric field for "Teléfono".
@@ -100,7 +98,18 @@ class MunaycoContactForm extends FormBase {
       '#required' => TRUE,
       '#default_value' => '',
       '#attributes' => [
-        'placeholder' => $this->t('Ingrese su número de teléfono'),
+        'placeholder' => $this->t('ej. 987789987'),
+      ],
+    ];
+
+    // Add a field for "Explícanos tu caso".
+    $form['message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Explícanos tu caso'),
+      '#required' => TRUE,
+      '#default_value' => '',
+      '#attributes' => [
+        'placeholder' => $this->t('Detalla tu caso'),
       ],
     ];
 
